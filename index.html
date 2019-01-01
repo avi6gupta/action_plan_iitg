@@ -75,10 +75,18 @@
             });
         </script>
         <style>
-		.sector_modification
-		{
-			padding: 0px|important;
-		}
+        #buttons
+        {
+          margin: 5px!important;
+        }
+        .header_modification
+        {
+          line-height: 1 !important;
+        }
+        .sector_modification
+        {
+          padding-bottom: 60px!important;
+        }
         @media only screen and (max-width:464px)
         {
           #iframe
@@ -133,15 +141,15 @@
         {
           margin-top: 50px;
         }
-		
-		
+
+
 		@media only screen and (max-width:600px){
 			.mobi{
 				margin-left:3%;
 			}
-		
+
 		}
-		
+
         </style>
 
     </head>
@@ -151,7 +159,7 @@
     <body>
 
         <!--========== HEADER ==========-->
-        <header class="navbar-fixed-top s-header js__header-sticky js__header-overlay">
+        <header class="navbar-fixed-top s-header js__header-sticky js__header-overlay header_modification">
             <!-- Navbar -->
             <div class="s-header__navbar collapse navbar-collapse">
                 <div class="s-header__container">
@@ -257,8 +265,8 @@
                           <a class="js__popup__youtube" href="https://youtube.com/watch?v=o-gVOCra_OM" title="Intro Video">
                           <i class="s-icon s-icon--lg s-icon--white-bg g-radius--circle ti-control-play"></i>
                           </a><br><br><br><br><br>
-						  <a href="https://goo.gl/forms/M5pQ4JWGH2tDeTM53" class="btn btn-lg btn-danger smoothScroll wow fadeInUp" data-wow-delay="0.9s" >REGISTER NOW</a> 
-                        <a href="manual.pdf" class="btn btn-lg btn-danger smoothScroll wow fadeInUp" data-wow-delay="0.9s">LEARN MORE</a>
+						  <a href="https://goo.gl/forms/M5pQ4JWGH2tDeTM53" id="buttons" class="btn btn-lg btn-danger smoothScroll wow fadeInUp" data-wow-delay="0.9s" >REGISTER NOW</a>
+                        <a href="manual.pdf" class="btn btn-lg btn-danger smoothScroll wow fadeInUp" id="buttons" data-wow-delay="0.9s">LEARN MORE</a>
 
 
                           <!-- <span>Register</span> -->
@@ -283,8 +291,8 @@
                             <button onclick="location.href='http://www.googledoc.com'" type="button" style="border-radius: 4px;color:teal;background-color:powderblue;font-size: 20px;">Register</button>
                             <span>Register</span> -->
                         <!-- </a> -->
-                        <a href="https://goo.gl/forms/M5pQ4JWGH2tDeTM53" class="btn btn-lg btn-danger smoothScroll wow fadeInUp" data-wow-delay="0.9s">REGISTER NOW</a>
-                        <a href="manual.pdf" class="btn btn-lg btn-danger smoothScroll wow fadeInUp" data-wow-delay="0.9s">LEARN MORE</a>
+                        <a href="https://goo.gl/forms/M5pQ4JWGH2tDeTM53" id="buttons" class="btn btn-lg btn-danger smoothScroll wow fadeInUp" data-wow-delay="0.9s">REGISTER NOW</a>
+                        <a href="manual.pdf" class="btn btn-lg btn-danger smoothScroll wow fadeInUp" id="buttons" data-wow-delay="0.9s">LEARN MORE</a>
 
 
                     </div>
@@ -538,7 +546,7 @@
                 <div class="circle font-weight-bold">1</div>
               </div>
               <div class="col-6" >
-                <h5 style="color: #FF69B4">1st Jan, 2018 - 20th Jan, 2019</h5>
+                <h5 style="color: #FF69B4">1st Jan, 2019 - 20th Jan, 2019</h5>
                 <p style="color: white; font-size:18px;">Registration and problem statement submission phase</p>
               </div>
             </div>
@@ -683,7 +691,6 @@
     </div>
 
     <div id="js__scroll-to-section3" class="g-container--md g-padding-y-80--xs g-padding-y-125--sm sector_modification">
-        <h2 class="g-font-size-32--xs g-font-size-36--md g-text-center--xs g-margin-b-80--xs"> </h2>
         <!-- <div class="row g-margin-b-50--xs">
             <div class="col-sm-6 g-margin-b-30--xs g-margin-b-0--sm">
                 <p>This is where we sit down, grab a cup of coffee and dial in the details. Understanding the task at hand and ironing out the wrinkles is key. Now that we've aligned the details, it's time to get things mapped out and organized.</p>
@@ -930,7 +937,7 @@
                     <!--</div>-->
 
                 </div>
-                <!--Item--> 
+                <!--Item-->
                  <div class="s-portfolio__item cbp-item motion graphic">
                     <!--<div class="s-portfolio__img-effect"> -->
                         <img id="sponsorlogo" src="img/coming_soon.png" alt="Portfolio Image" align="middle">
@@ -943,7 +950,7 @@
                         <img id="sponsorlogo"src="img/coming_soon.png" alt="Portfolio Image" align="middle">
                     <!--</div>-->
 
-                </div> 
+                </div>
                 <!-- Item -->
                 <!-- <div class="s-portfolio__item cbp-item motion graphic">
                     <div class="s-portfolio__img-effect">
@@ -1277,7 +1284,7 @@
                         <p class="g-font-size-14--xs g-margin-b-0--xs g-color--white-opacity-light"> Developed by: <a href="#">Hardik Aviral Arpit Anubhav</a></p>
                     </div> -->
                 </div>
-            </div> 
+            </div>
             <!-- End Copyright -->
         </footer>
         <!--========== END FOOTER ==========-->
