@@ -1,9 +1,9 @@
 User-agent: *
  Disallow: /assets/
  Disallow: /css/
- Disallow:/dev-tools/
- Disallow:/include/media/
- Disallow:/js/
- Disallow:/scss/
- Disallow:/vendor/
-Sitemap:https://ayuljain7.github.io/action_plan_iitg/sitemap.xml
+ Disallow: /dev-tools/
+ Disallow: /include/media/
+ Disallow: /js/
+ Disallow: /scss/
+ Disallow: /vendor/
+Sitemap: https://ayuljain7.github.io/action_plan_iitg/sitemap.xml
