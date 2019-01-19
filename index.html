@@ -74,7 +74,172 @@
                 javascript:void(0);
             });
         </script>
+        <script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 21, 2019 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var hours = Math.floor(distance / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("timer").innerHTML =  hours + " hrs "
+  + minutes + " min " + seconds + " sec " + '<span style="color: #FF69B4;font-size:20px;font-weight:400">&nbsp;&nbsp;Left</span>';
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+<script>
+// When the user clicks on div, open the popup
+	function myFunction() 
+	{
+		var popup = document.getElementById("myPopup");
+	popup.classList.toggle("show");
+	}
+</script>
+<script>
+// When the user clicks on div, open the popup
+	function myFunction() 
+	{
+		var popup = document.getElementById("mypopup");
+	popup.classList.toggle("show");
+	}
+</script>
         <style>
+		@keyframes example 
+		{
+			0%   {background-color: #ADD8E6;}
+			25%  {background-color: yellow;}
+			50%  {background-color: yellow;}
+			100% {background-color: #ADD8E6;}
+		}
+		.blinking
+		{
+			animation-name:example;
+			animation-duration:1.3s;
+			animation-iteration-count:infinite;
+		}
+		.popup {
+				position: relative;
+				display: inline-block;
+				cursor: pointer;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				}
+
+			/* The actual popup */
+		.popup .popuptext 
+		{
+		visibility: hidden;
+		width: 160px;
+		background-color: #555;
+		color: #fff;
+		text-align: center;
+		border-radius: 6px;
+		padding: 8px 0;
+		position: absolute;
+		z-index: 1;
+		bottom: 125%;
+		left: 50%;
+		margin-left: -80px;
+		}
+
+		/* Popup arrow */
+		.popup .popuptext::after 
+		{
+		content: "";
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		margin-left: -5px;
+		border-width: 5px;
+		border-style: solid;
+		border-color: #555 transparent transparent transparent;
+		}
+
+		/* Toggle this class - hide and show the popup */
+		.popup .show 
+		{
+		visibility: visible;
+		-webkit-animation: fadeIn 1s;
+		animation: fadeIn 1s;
+		}
+		.Popup {
+				position: relative;
+				display: inline-block;
+				cursor: pointer;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				}
+
+			/* The actual popup */
+		.Popup .Popuptext 
+		{
+		visibility: hidden;
+		width: 160px;
+		background-color: #555;
+		color: #fff;
+		text-align: center;
+		border-radius: 6px;
+		padding: 8px 0;
+		position: absolute;
+		z-index: 1;
+		bottom: 125%;
+		left: 50%;
+		margin-left: -80px;
+		}
+
+		/* Popup arrow */
+		.Popup .Popuptext::after 
+		{
+		content: "";
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		margin-left: -5px;
+		border-width: 5px;
+		border-style: solid;
+		border-color: #555 transparent transparent transparent;
+		}
+
+		/* Toggle this class - hide and show the popup */
+		.Popup .show 
+		{
+		visibility: visible;
+		-webkit-animation: fadeIn 1s;
+		animation: fadeIn 1s;
+		}
+
+		/* Add animation (fade in the popup) */
+		@-webkit-keyframes fadeIn
+		{
+		from {opacity: 0;} 
+		to {opacity: 1;}
+		}
+
+		@keyframes fadeIn 
+		{
+		from {opacity: 0;}
+		to {opacity:1 ;}
+		}	
         #buttons
         {
           margin: 5px!important;
@@ -150,7 +315,7 @@
 
 		}
 
-        </style>
+        </style>	
 
     </head>
     <!-- End Head -->
@@ -177,6 +342,11 @@
                         </div>
                             <!-- End Logo -->
                         </div>
+						<div class="s-header__navbar-row-col" style="padding-left:400px">
+							<h5 style="color: #FF69B4">Hurry up guys Only</h5>
+							<p style="color: #003366; font-size:18px;font-weight:700" id="timer"></p>
+							
+						</div>
                         <div class="s-header__navbar-row-col">
                             <!-- Trigger -->
                             <a href="javascript:void(0);" class="s-header__trigger js__trigger">
@@ -279,7 +449,7 @@
                           <img src="img/logo.jpg" alt="Action Plan Logo"/>
                             <h1 class="g-font-size-35--xs g-font-size-45--sm g-font-size-55--md g-color--black" style="font-color:black">WELFARE BOARD,IIT GUWAHATI<br>ACTION PLAN</h1>
                         </div>
-                       
+
                         <a href="https://goo.gl/forms/M5pQ4JWGH2tDeTM53" id="buttons" class="btn btn-lg btn-danger smoothScroll wow fadeInUp" data-wow-delay="0.9s">REGISTER NOW</a>
                         <a href="manual.pdf" class="btn btn-lg btn-danger smoothScroll wow fadeInUp" id="buttons" data-wow-delay="0.9s">LEARN MORE</a>
 
@@ -295,7 +465,7 @@
             <a href="javascript:void(0);" class="s-swiper__arrow-v1--left s-icon s-icon--md s-icon--white-brd g-radius--circle ti-angle-left js__swiper-btn--prev"></a>
             <!-- End Arrows -->
 
-           
+
         </div>
         <!--========== END SWIPER SLIDER ==========-->
 
@@ -399,7 +569,7 @@
                 <h1 class="g-font-size-40--xs g-font-size-50--sm g-font-size-60--md g-color--white">Win prizes worth 80,000 Rupees</h1>
             </div>
         </div>
-        
+
         <!--End Info -->
        <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
@@ -415,9 +585,10 @@
                 <div class="circle font-weight-bold">1</div>
               </div>
               <div class="col-6" >
-                <h5 style="color: #FF69B4">1st Jan, 2019 - 20th Jan, 2019</h5>
+               <h5 style="color: #FF69B4">1st Jan, 2019 - 20th Jan, 2019</h5> 
                 <p style="color: white; font-size:18px;">Registration and problem statement submission phase</p>
               </div>
+              
             </div>
             <!--path between 1-2-->
             <div class="row timeline">
@@ -434,7 +605,10 @@
             <!--second section-->
             <div class="row align-items-center justify-content-end how-it-works d-flex">
               <div class="col-6 text-right">
-                <h5 style="color: #FF69B4">1st Feb,2019 - 15th Feb,2019</h5>
+                <div class="popup" onclick="myFunction()">
+					<h5 style="color: #FF69B4"><span class="blinking">27th Jan,2019 - 8th Feb,2019</span> </h5>
+					<span class="popuptext" id="mypopup">Revised dates</span>
+				</div>
                 <p style="color: white; font-size:18px;">Execution and Mentorship Phase</p>
               </div>
               <div class="col-2 text-center  d-inline-flex justify-content-center align-items-center">
@@ -459,8 +633,12 @@
                 <div class="circle font-weight-bold">3</div>
               </div>
               <div class="col-6">
-                <h5 style="color: #FF69B4">16th Feb, 2019</h5>
-                <p style="color: white; font-size:18px;">Final Presentation</p>
+				<div class="popup" onclick="myFunction()">
+					<h5 style="color: #FF69B4"><span class="blinking">9th Feb, 2019</span></h5>
+					<p style="color: white; font-size:18px;">Final Presentation</p>
+					<span class="Popuptext" id="mypopup">Revised dates</span>
+				</div>
+
               </div>
             </div>
             <!-- -->
@@ -495,7 +673,7 @@
     <!-- Rules-->
     <div id="js__scroll-to-section1" class="g-container--md g-padding-y-80--xs g-padding-y-125--sm">
         <h2 class="g-font-size-32--xs g-font-size-36--md g-text-center--xs g-margin-b-80--xs">Rules and Regulations </h2>
-       
+
         <div  style="color: rgb(61, 25, 25);font-size:18px;">
             <!-- <p class="g-margin-b-5--xs"> -->
 
@@ -522,7 +700,7 @@
     </div>
 
     <div id="js__scroll-to-section3" class="g-container--md g-padding-y-80--xs g-padding-y-125--sm sector_modification">
-       
+
         <div >
             <p style="text-align:justify;color:rgb(61, 25, 25);font-weight: 400;font-size: 18px">
                 Action plan teams selected from first round through the problem statement are allotted mentors with whom teams can  get in touch with for the  problems prevailing during the project. Mentor will not only guide students in developing an action plan of a particular social problem but also you will get an exposure problems tackled during implication of a working model project and solutions to it. You will be mentored  around 2-3 hours per week through online conversation or telephonic conversation whichever preferable by mentor  working in a field that aligns with your project sector .</p>
@@ -535,7 +713,7 @@
                         <!-- <h1>Sectors</h1> -->
                         <p><img src="img/sect.png" width="70%" height="70%"></p>
                     </div>
-          
+
         </div>
 
     </div>
@@ -660,7 +838,7 @@
                   </div>
                 </div>
               </div>
-              
+
             </div>
           </div>
         </div>
@@ -726,7 +904,7 @@
                     <!--</div>-->
 
                 </div>
-                
+
                 <!-- End Item -->
             </div>
             <!-- End Sponsors Gallery -->
@@ -848,13 +1026,13 @@
                         </div>
                     </section>
 
-        
+
         <!-- End Contact US-->
 
-       
+
                         </a>
                     </div>
-                    
+
                 </div>
             </div>
             <!-- End Copyright -->
@@ -891,6 +1069,7 @@
         <script type="text/javascript" src="js/components/parallax.min.js"></script>
         <script type="text/javascript" src="js/components/google-map.min.js"></script>
         <script type="text/javascript" src="js/components/wow.min.js"></script>
+        <script type="text/javascript" src="js/components/countdown-timer.js"></script>
         <!--========== END JAVASCRIPTS ==========-->
 
     </body>
